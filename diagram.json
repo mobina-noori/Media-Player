@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 35.4, "left": 31.74, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -137.77,
+      "left": 167.78,
+      "attrs": { "distance": "20" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic2",
+      "top": -137.78,
+      "left": -13.89,
+      "attrs": { "distance": "35" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic3",
+      "top": 306.56,
+      "left": 205.29,
+      "rotate": 90,
+      "attrs": { "distance": "153" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic4",
+      "top": 485,
+      "left": 207.77,
+      "rotate": 90,
+      "attrs": { "distance": "257" }
+    }
+  ],
+  "connections": [
+    [ "uno:GND.3", "ultrasonic1:GND", "black", [ "v-241.09", "h58.34" ] ],
+    [ "ultrasonic2:GND", "uno:GND.3", "black", [ "v29.09", "h123.33" ] ],
+    [ "ultrasonic1:VCC", "uno:5V", "red", [ "v17.9", "h-49.91" ] ],
+    [ "ultrasonic2:VCC", "uno:5V", "red", [ "v17.9", "h133.41" ] ],
+    [ "ultrasonic1:TRIG", "uno:2", "green", [ "v43.1", "h26.05" ] ],
+    [ "ultrasonic1:ECHO", "uno:3", "green", [ "v48.93", "h4.38" ] ],
+    [ "ultrasonic2:TRIG", "uno:4", "green", [ "v48.93", "h179.71" ] ],
+    [ "ultrasonic2:ECHO", "uno:5", "green", [ "v38.43", "h162.33" ] ],
+    [ "ultrasonic3:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "ultrasonic4:VCC", "uno:5V", "red", [ "h0" ] ],
+    [ "ultrasonic3:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "ultrasonic4:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "ultrasonic3:TRIG", "uno:7", "green", [ "h0" ] ],
+    [ "ultrasonic3:ECHO", "uno:6", "green", [ "h0" ] ],
+    [ "ultrasonic4:TRIG", "uno:8", "green", [ "h0" ] ],
+    [ "ultrasonic4:ECHO", "uno:9", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
